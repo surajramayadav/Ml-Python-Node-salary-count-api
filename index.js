@@ -4,7 +4,7 @@ const { PythonShell } = require('python-shell');
 // let pyshell = new PythonShell('script1.py');
 
 
-
+const hostname = '0.0.0.0';
 const app = express()
 const port = 3000
 app.get('/predict', (req, res) => {
@@ -16,5 +16,4 @@ app.get('/predict', (req, res) => {
 
     })
 })
-app.listen(port, () => console.log(`Example app listening on port 
-${port}!`))
+app.listen(port, () => console.log(`server runnibg at http://${hostname}:${port}`))
